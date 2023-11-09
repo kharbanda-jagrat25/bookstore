@@ -1,0 +1,31 @@
+/* Style for the title of the Books page */
+h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+/* Style for the book list */
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style for individual book cards */
+.book-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.book-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.book-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}

@@ -1,0 +1,35 @@
+/* Style for the author list */
+.author-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style for individual author cards */
+.author-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.author-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.author-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Style for the list of books by the author */
+.author-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.author-card li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
