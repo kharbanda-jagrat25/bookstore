@@ -1,25 +1,32 @@
-import React from 'react';
-import './Home.css';
+import React, { useEffect, useState } from "react";
+
+import Wallpaper from "../../assets/images/wallpaper.png";
+import "./home.scss";
+import { sampleBooks } from "../../data/data";
 
 const Home = () => {
+  const [featuredBooks, setFeaturedBooks] = useState([]);
+
+  useEffect(() => {
+    setFeaturedBooks(sampleBooks?.filter((book) => book.isFeatured));
+  }, []);
+
   return (
-    <div>
-      <h1>Welcome to the Bookstore</h1>
-      <div className="featured-book">
-        <img
-          src="https://picsum.photos/200/300"
-          alt="Featured Book Cover"
-          className="featured-book-cover"
-        />
-        <div className="featured-book-details">
-          <h2>Featured Book Title</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
-            justo vel justo varius volutpat. Integer sed faucibus dolor.
-          </p>
+    <>
+      <img src={Wallpaper} alt="" width="100%" />
+      <div className="featured-books-container">
+        <h4 className="title">Features books</h4>
+        <div className="book-list">
+        {featuredBooks?.map(({ coverImage, id, description, title }) => (
+            <div key={id} className="book">
+              <img src={coverImage} alt={title} />
+              <h4>{title}</h4>
+              <h6>{description}</h6>
+            </div>
+        ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

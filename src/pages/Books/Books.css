@@ -5,11 +5,11 @@ h1 {
 }
 
 /* Style for the book list */
-.book-list {
+/* .book-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
+} */
 
 /* Style for individual book cards */
 .book-card {

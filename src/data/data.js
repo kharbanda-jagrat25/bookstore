@@ -5,8 +5,9 @@ export const sampleBooks = [
         author: 'Author 1',
         genre: 'Fiction',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo vel justo varius volutpat. Integer sed faucibus dolor.',
-        coverImage: 'https://picsum.photos/200/300',
-        price: 200.0
+        coverImage: 'https://picsum.photos/200/301',
+        price: 200.0,
+        isFeatured: true,
     },
     {
         id: 2,
@@ -14,8 +15,9 @@ export const sampleBooks = [
         author: 'Author 2',
         genre: 'Non-fiction',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo vel justo varius volutpat. Integer sed faucibus dolor.',
-        coverImage: 'https://picsum.photos/200/300',
-        price: 150.0
+        coverImage: 'https://picsum.photos/200/303',
+        price: 150.0,
+        isFeatured: true,
     },
     {
         id: 3,
@@ -24,7 +26,9 @@ export const sampleBooks = [
         genre: 'Non-fiction',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo vel justo varius volutpat. Integer sed faucibus dolor.',
         coverImage: 'https://picsum.photos/200/300',
-        price: 250.0
+        price: 250.0,
+        isFeatured: false,
+
     },
     {
         id: 4,
@@ -33,6 +37,30 @@ export const sampleBooks = [
         genre: 'Fiction',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo vel justo varius volutpat. Integer sed faucibus dolor.',
         coverImage: 'https://picsum.photos/200/300',
-        price: 200.0
+        price: 200.0,
+        isFeatured: true,
+
+    },
+    {
+        id: 5,
+        title: 'Book 5',
+        author: 'Author 5',
+        genre: 'Fiction',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo vel justo varius volutpat. Integer sed faucibus dolor.',
+        coverImage: 'https://picsum.photos/200/300',
+        price: 200.0,
+        isFeatured: true,
+
+    },
+    {
+        id: 6,
+        title: 'Book 6',
+        author: 'Author 6',
+        genre: 'Fiction',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo vel justo varius volutpat. Integer sed faucibus dolor.',
+        coverImage: 'https://picsum.photos/200/300',
+        price: 200.0,
+        isFeatured: true,
+
     },
 ];

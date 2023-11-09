@@ -1,0 +1,43 @@
+@import "../../styles/index.scss";
+
+.featured-books-container {
+  padding: 30px 60px;
+  flex-direction: column;
+  @include flex-mixin(flex, center, center);
+  .title {
+    font-size: 25px;
+    color: $theme_blue;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  .book-list {
+    @include flex-mixin(flex, space-between, center);
+    gap: 25px;
+    .book {
+      display: flex;
+      flex-direction: column;
+      img {
+        border-radius: 4px;
+        height: 300px;
+        &:hover {
+            transition-delay: 0.3s ease;
+            opacity: 0.5;
+        }
+      }
+      h4 {
+        margin: 15px 0;
+        color: $theme_black;
+      }
+      h6 {
+        color: $theme_gray;
+        margin: 0;
+        width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
