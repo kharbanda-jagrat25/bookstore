@@ -1,0 +1,17 @@
+@import "../../styles/index.scss";
+
+.add-to-cart {
+    height: 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 4px 10px;
+    border: 1px solid $theme_blue;
+    background-color: $theme_blue;
+    color: $theme_white;
+    font-weight: 500;
+    margin: 10px 0;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  

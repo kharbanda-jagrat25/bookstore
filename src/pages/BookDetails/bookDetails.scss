@@ -1,0 +1,25 @@
+@import "../../styles/index.scss";
+
+.list-container {
+  .book-details {
+    @include flex-mixin(flex, "", "");
+    .book-info {
+      margin-left: 10px;
+      h2 {
+        font-size: 18px;
+        color: $theme_blue;
+        margin: 0;
+      }
+
+      p {
+        color: $theme_gray;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+      .description {
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+  }
+}

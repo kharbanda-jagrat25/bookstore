@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
-import './ShoppingCart.css';
+import React, { useEffect, useState } from 'react';
+import './shoppingCart.scss';
+import { sampleBooks } from '../../data/data';
 
 const ShoppingCart = () => {
     const [cart, setCart] = useState([]);
 
-    const addToCart = (book) => {
-        setCart([...cart, book]);
-    };
+    useEffect(() => {
+        setCart(sampleBooks.filter(b => b.isAddedToCart));
+    }, []);
 
-    const removeFromCart = (bookId) => {
-        const updatedCart = cart.filter((item) => item.id !== bookId);
+    const removeFromCart = (book) => {
+        book.isAddedToCart = false;
+        const updatedCart = cart.filter((item) => item.id !== book.id);
         setCart(updatedCart);
     };
 
@@ -18,8 +20,8 @@ const ShoppingCart = () => {
     };
 
     return (
-        <div>
-            <h1>Shopping Cart</h1>
+        <div className='list-container'>
+            <h1 className='heading'>Shopping Cart</h1>
             <div className="cart-items">
                 {cart.length === 0 ? (
                     <p>Your cart is empty.</p>
@@ -28,7 +30,7 @@ const ShoppingCart = () => {
                         {cart.map((book) => (
                             <li key={book.id}>
                                 {book.title} - ${book.price}
-                                <button onClick={() => removeFromCart(book.id)}>Remove</button>
+                                <button onClick={() => removeFromCart(book)}>Remove</button>
                             </li>
                         ))}
                     </ul>

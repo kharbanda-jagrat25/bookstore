@@ -1,39 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import './Authors.css';
+import React from "react";
+
+import Card from "../../components/Card/Card";
+import { sampleAuthors } from "../../data/authorData";
+import { useNavigate } from "react-router-dom";
 
 const Authors = () => {
-    // Sample author data for demonstration
-    const sampleAuthors = [
-        {
-            id: 1,
-            name: 'Author 1',
-            books: ['Book 1', 'Book 2'],
-        },
-        {
-            id: 2,
-            name: 'Author 2',
-            books: ['Book 3', 'Book 4'],
-        },
-    ];
+  const navigate = useNavigate();
 
-    return (
-        <div>
-            <h1>Authors</h1>
-            <div className="author-list">
-                {sampleAuthors.map((author) => (
-                    <div key={author.id} className="author-card">
-                        <h2>{author.name}</h2>
-                        <p>Books by this author:</p>
-                        <ul>
-                            {author.books.map((book, index) => (
-                                <li key={index}>{book}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+  const onAuthorClick = (authorName) => {
+    navigate(`/books?author=${authorName}`);
+  }
+
+  return (
+    <div className="list-container">
+      <div className="list">
+        {sampleAuthors?.map((author) => (
+          <Card
+            {...author}
+            onClick={() => onAuthorClick(author.name)}
+            key={author.id}
+            subName={`${author?.books?.length} books`}
+            style={{ cursor: 'pointer' }}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Authors;
